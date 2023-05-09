@@ -1,0 +1,119 @@
+==============================================================================
+Payment Log                                                                   
+==============================================================================
+Verify Login With Invalid User And Valid Password                     | PASS |
+------------------------------------------------------------------------------
+Verify Login With Valid User And Invalid Password                     | PASS |
+------------------------------------------------------------------------------
+Verify Login With Valid User And Empty Password                       | PASS |
+------------------------------------------------------------------------------
+Verify Login With Empty User And Valid Password                       | PASS |
+------------------------------------------------------------------------------
+Verify Login With Empty User And InValid Password                     | PASS |
+------------------------------------------------------------------------------
+Verify Login With Empty User And Empty Password                       | PASS |
+------------------------------------------------------------------------------
+Verify Login With Wrong User And Empty Password                       | PASS |
+------------------------------------------------------------------------------
+Verify Login With Wrong User And Wrong Password                       | PASS |
+------------------------------------------------------------------------------
+Verify Login With All Usernames And Passwords                         standard_user
+locked_out_user
+problem_user
+performance_glitch_user
+All logins verified
+| PASS |
+------------------------------------------------------------------------------
+Login With General User And Valid Password                              
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\PycharmProjects\testing\project\saucedemo_project\Test_Cases\payment_log.robot:137
+    T:  Login With General User And Valid Password    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\PycharmProjects\testing\project\saucedemo_project\Test_Cases\payment_log.robot:147
+      Display Page    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\PycharmProjects\testing\project\saucedemo_project\Test_Cases\payment_log.robot:323
+      Wait Until Page Contains Element    ${All_Items_link}
+      |  ${All_Items_link} = xpath:"//nav[@class='bm-item-list'] /a[@id='inventory_sidebar_link' ]" (str)
+______________________________________________________________________________
+| FAIL |
+InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression "//nav[@class='bm-item-list'] /a[@id='inventory_sidebar_link' ]" because of the following error:
+TypeError: Failed to execute 'evaluate' on 'Document': The result is not a node set, and therefore cannot be converted to the desired type.
+  (Session info: headless chrome=112.0.5615.138)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x004EDCE3+50899]
+	(No symbol) [0x0047E111]
+	(No symbol) [0x00385588]
+	(No symbol) [0x00387EDB]
+	(No symbol) [0x00387DB0]
+	(No symbol) [0x00388030]
+	(No symbol) [0x003B0552]
+	(No symbol) [0x003B0AFB]
+	(No symbol) [0x003DF93C]
+	(No symbol) [0x003CB944]
+	(No symbol) [0x003DE01C]
+	(No symbol) [0x003CB6F6]
+	(No symbol) [0x003A7708]
+	(No symbol) [0x003A886D]
+	GetHandleVerifier [0x00753EAE+2566302]
+	GetHandleVerifier [0x007892B1+2784417]
+	GetHandleVerifier [0x0078327C+2759788]
+	GetHandleVerifier [0x00585740+672048]
+	(No symbol) [0x00488872]
+	(No symbol) [0x004841C8]
+	(No symbol) [0x004842AB]
+	(No symbol) [0x004771B7]
+	BaseThreadInitThunk [0x777900F9+25]
+	RtlGetAppContainerNamedObjectPath [0x778D7BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x778D7B8E+238]
+------------------------------------------------------------------------------
+Filter Products By Price                                              | PASS |
+------------------------------------------------------------------------------
+Add To Cart                                                           None
+None
+| PASS |
+------------------------------------------------------------------------------
+Removing the Cart Items                                               None
+None
+| PASS |
+------------------------------------------------------------------------------
+Checkout Page                                                         2
+| PASS |
+------------------------------------------------------------------------------
+Checkoutform with all empty fields                                    Actual:Error: First Name is required
+Expected:Error: First Name is required
+| PASS |
+------------------------------------------------------------------------------
+Checkoutform with Firstname is Not Empty                              Actual:Error: Last Name is required
+Expected:Error: Last Name is required
+| PASS |
+------------------------------------------------------------------------------
+Checkoutform with Lastname is Not Empty                               Actual:Error: First Name is required
+Expected:Error: First Name is required
+| PASS |
+------------------------------------------------------------------------------
+Checkoutform with Firstname and Lastname is Not Empty                 Actual:Error: Postal Code is required
+Expected:Error: Postal Code is required
+| PASS |
+------------------------------------------------------------------------------
+Checkoutform with zipcode is not empty                                Actual:Error: First Name is required
+Expected:Error: First Name is required
+| PASS |
+------------------------------------------------------------------------------
+Checkout form with all fields are not empty                           | PASS |
+------------------------------------------------------------------------------
+Payment Page Should Contains                                          2
+Item total: $39.98
+Tax: $3.20
+Total: $43.18
+Item total: 39.98, Tax: 3.2, Grand total: 43.18
+| PASS |
+------------------------------------------------------------------------------
+Checkout Compelete                                                    | PASS |
+------------------------------------------------------------------------------
+Payment Log                                                           | FAIL |
+22 tests, 21 passed, 1 failed
+==============================================================================
+Output:  D:\PycharmProjects\testing\project\saucedemo_project\Results\pabot_results\0\output.xml
